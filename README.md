@@ -1,4 +1,4 @@
-# Design-Patterns-In-Typescript
+# Design-Patterns-in-Typescript
 
 ## One Mega Problem Statement - "Setting Up of a Car Company"
 
@@ -34,19 +34,19 @@ In our company, we want to maintain a list of customers and cars and we want to 
 
 #### 5. MEDIATOR -
 
-Description Coming Soon..
+We have 3 car plants, one for each cartype(luxury, sedan and sports)that has their own condition of booking cars based on how many cars are in the stock; we have a mediator that is showroom that take the customer's request for booking and then requests the carplant based on the type of car requested; In this way showroom acts as a mediator and customer doesn't have to deal with the carplant directly
 
 #### 6. MEMENTO -
 
-Description Coming Soon..
+We have created a software for our car, and we want to track different status of the software while it is undergoing changes, so that it can safely be restored to the previous version. (Just like GIT)
 
 #### 7. OBSERVER -
 
-Description Coming Soon..
+we have a Car headquarter and some showrooms. New showrooms can be created independently in different cities, and they can request the headquarter to add them as a franchise; as soon as they are added, they get all the info of the cartypes that are avaiable at that time in the headquarter; once a new cartype is added in the headquarter; all the added showrooms are notified
 
 #### 8. STATE -
 
-Description Coming Soon..
+We have a car that can be started with any gear.When we accelerate to some speed, then gear checks the speed limit of which it can afford, then it displays the corresponding success or failure message
 
 #### 9. STRATEGY -
 
@@ -54,11 +54,16 @@ Description Coming Soon..
 
 #### 10. TEMPLATE -
 
-Description Coming Soon..
+Constructing car has separate steps like carbodyassemble, assembleengine etc.
+and there are 3 different types of car luxury , sedan etc. All of these 3 will have different ways of constructing car steps; so they will implement methods differently but constructing car always use the basic methods
 
 #### 11. VISITOR -
 
-Description Coming Soon..
+We have 3 cars sedan, luxury and sportsCar. Each one has proper defined getPrice functions. Now, we have to make changes in that function(addding some extra broker fee), Following open-closed principle, we dont want to make changes in each classes. So, we craete a visitor class.
+
+#### 12. others(coming soon) -
+
+Blackboard, Null object, Servant, Specification
 
 ### Creational Design Patterns -
 
@@ -80,7 +85,11 @@ Description Coming Soon..
 
 #### 5. SINGLETON -
 
-Description Coming Soon..
+Our company will have a single headquarter.
+
+#### 6. others(coming soon) -
+
+Dependency Injection, Lazy initialization, Multiton, Object pool, Resource acquisition is initialization (RAII)
 
 ### Structural Design Patterns -
 
@@ -111,3 +120,7 @@ Description Coming Soon..
 #### 7. PROXY -
 
 Description Coming Soon..
+
+#### 8. others(coming soon) -
+
+Extension object, Front controller, Marker, Module, Twin
