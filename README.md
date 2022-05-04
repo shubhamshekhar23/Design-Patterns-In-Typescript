@@ -461,6 +461,8 @@ so in this way we only have 3 cars in the cache and there is no memory overload.
 
 #### 7. PROXY -
 
+We have a car system class that has a method driveCar. But, If the driver is age below 18, then car should not drive. We dont want to put this check on theis car Class. Instead, we will create a CarProxy class that is exposed to the client , that will do the check and take decision.
+
 ```
     let d: Driver = new Driver(26, "shubham");
     let c: CarProxy = new CarProxy();
