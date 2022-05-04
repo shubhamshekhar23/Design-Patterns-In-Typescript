@@ -417,6 +417,8 @@ We have different employees in our car company that can have subordinates( which
 
 #### 4. DECORATOR -
 
+We have a Car and while manufacturing it , we want to add different functionality to it like NitroSystem, Security System, Auto Pilot system etc.Order of the addition of functionality doesnt matter.
+
 ```
   let c1: SystemPlan = new NitroBoost(
     new SecuritySystem(new AutoPilot(new CarSystem()))
@@ -433,12 +435,22 @@ We have different employees in our car company that can have subordinates( which
 
 #### 5. FACADE -
 
+We want to expose a functionality of putting Car on autoPilot. But for autoPilot to work, there are some steps that has to be done like mapOn, EngineOn, AI on, guiding Voice on etc. All these steps are done by Facade and is hidden from client.
+
 ```
   let ap: AutoPilot = new AutoPilot();
   ap.start();
 ```
 
 #### 6. FLYWEIGHT -
+
+After a car is purchased by a customer, he can get the details when shoudl he go for servicing; he can go to website of the company
+and specify which type of car he has; then he can set the kmcovered by the car and how much mileage
+he is getting; then based on the internal formula of the system; the advice is returned;
+
+Now , ther are so many request for the same type of car like thousands; and we have to create carstausobject for all of them;
+this is not a good idea; thats why we cache the object created and then return that same object to the next customer if the type matches
+so in this way we only have 3 cars in the cache and there is no memory overload.
 
 ```
   let cs1: CarStatusPlan = CarProvider.getCarStatus("sports");

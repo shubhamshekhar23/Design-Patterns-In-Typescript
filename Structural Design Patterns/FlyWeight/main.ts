@@ -9,13 +9,14 @@ interface PlanMap<T, U> {
 }
 
 class CarProvider {
-  private static hm: PlanMap<String, CarStatusPlan> = {};
+  private static hm: PlanMap<string, CarStatusPlan> = {};
 
-  public static getCarStatus(type: String): CarStatusPlan {
+  public static getCarStatus(type: string): CarStatusPlan {
     let c: CarStatusPlan = null;
 
-    if (CarProvider.hm["type"]) c = CarProvider.hm["type"];
-    else {
+    if (CarProvider.hm[type]) {
+      c = CarProvider.hm[type];
+    } else {
       switch (type) {
         case "sports":
           c = new SportsCarStatus();
@@ -29,7 +30,7 @@ class CarProvider {
         default:
           console.log("Unreachable code!");
       }
-      CarProvider.hm["type"] = c;
+      CarProvider.hm[type] = c;
     }
     return c;
   }
