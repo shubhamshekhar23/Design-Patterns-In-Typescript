@@ -69,23 +69,23 @@ Blackboard, Null object, Servant, Specification
 
 #### 1. ABSTRACT FACTORY -
 
-Description Coming Soon..
+We want to expose only one simple functionality to manufacture a Car to the client and don't want client to worry abut how and where (USA, China, India) that Car is manufactured. Based on the Car Type, A Class (That is abstract factory), will internally decide how and which class too call.
 
 #### 2. BUILDER -
 
-Description Coming Soon..
+We have 3 cars type - Luxury, Sedan and Sports. They all have different process of building cars(e.g building engine, carbody , electrnoics etc). Car creation is a complicated process and its done by step by step. So, We use a builder and we expose the builder to client so that he doesnt have to deal with the nuances of the complication. Engineer uses this builder to create cars.
 
 #### 3. FACTORY -
 
-Description Coming Soon..
+We have 3 main car types- Luxury, sedan and sports car. To Manufacture these cars, one factory is provided and CLient can provide the car type and Factory takes care of manufacturing Car.
 
 #### 4. PROTOTYPE -
 
-Description Coming Soon..
+We have a superAlienCar that is manufactured on the Mars.(Yes we have colonised Mars !). Now just to manufacture a Car, we need to get the planetName from a Datbase, That is an expensive operation. So, We want to manufacture a Car and then want to clone that car, so that expensive operation doesn't run again. Here, we use prototype pattern.
 
 #### 5. SINGLETON -
 
-Our company will have a single headquarter.
+Our company will have a single headquarter that is only once created. After that we can only get access to that headquarter and can not be changed.
 
 #### 6. others(coming soon) -
 

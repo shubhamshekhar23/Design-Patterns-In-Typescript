@@ -1,15 +1,15 @@
-class GodCreation {
-  private static God: GodCreation = null;
+class HeadquarterCreation {
+  private static Headquarter: HeadquarterCreation = null;
   name: String;
   private constructor(name: String) {
     this.name = name;
   }
-  static createMyGod(name: String): GodCreation {
-    if (GodCreation.God == null) {
+  static createMyHeadquarter(name: String): HeadquarterCreation {
+    if (HeadquarterCreation.Headquarter == null) {
       /* only can be done from inside class */
-      GodCreation.God = new GodCreation(name);
+      HeadquarterCreation.Headquarter = new HeadquarterCreation(name);
     }
-    return GodCreation.God;
+    return HeadquarterCreation.Headquarter;
   }
   getName(): String {
     return this.name;
@@ -17,11 +17,13 @@ class GodCreation {
 }
 
 function main() {
-  let myGod: GodCreation = GodCreation.createMyGod("Jesus");
-  console.log(myGod);
-  let myGod2: GodCreation = GodCreation.createMyGod("Indra");
-  console.log(myGod2);
+  let myHeadquarter: HeadquarterCreation =
+    HeadquarterCreation.createMyHeadquarter("Berlin");
+  console.log(myHeadquarter.name);
+  let myHeadquarter2: HeadquarterCreation =
+    HeadquarterCreation.createMyHeadquarter("Munich");
+  console.log(myHeadquarter2.name);
 }
 main();
 
-// Both mygod and mygod2 have same reference, same pointer value;
+// Both myHeadquarter and myHeadquarter2 have same reference, same pointer value;
