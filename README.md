@@ -236,7 +236,7 @@ We have a car that can be started with any gear.When we accelerate to some speed
 
 #### 9. STRATEGY -
 
-Description Coming Soon..
+We have a special transofrmer Car that can perform 3 actions kick,jump and roll; each action has 2 types basic and super; We should be able to change the behavior of the actions at runTime for the transofrmer and accordingly its performAction should be run.
 
 ```
   let t: Transformer = new Transformer();
