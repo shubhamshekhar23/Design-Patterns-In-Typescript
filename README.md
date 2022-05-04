@@ -14,6 +14,8 @@ All the patterns are implemented using one Mega problem statement i.e Setting up
 
 Following are the features in our problem statement :
 
+---
+
 ### Behavioral Design Patterns -
 
 #### 1. CHAIN OF RESPONSIBILITY -
@@ -275,6 +277,8 @@ We have 3 cars sedan, luxury and sportsCar. Each one has proper defined getPrice
 
 Blackboard, Null object, Servant, Specification
 
+---
+
 ### Creational Design Patterns -
 
 #### 1. ABSTRACT FACTORY -
@@ -355,6 +359,8 @@ Our company will have a single headquarter that is only once created. After that
 #### 6. others(coming soon) -
 
 Dependency Injection, Lazy initialization, Multiton, Object pool, Resource acquisition is initialization (RAII)
+
+---
 
 ### Structural Design Patterns -
 
