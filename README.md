@@ -374,6 +374,8 @@ Our car has by default petrol system installed. Now, after launching our car in 
 
 #### 2. BRIDGE -
 
+We have different car types and we want provide a functionality of painting cars in different color schemes. We want color schemes to vary independently of the cars so that they are not dependent on each other.
+
 ```
   let sc1: CarPlan = new SportsCar(new RedFinish());
   sc1.paintCar();
@@ -383,6 +385,8 @@ Our car has by default petrol system installed. Now, after launching our car in 
 ```
 
 #### 3. COMPOSITE -
+
+We have different employees in our car company that can have subordinates( which are other employees). e.g director has subordinates leadManager. LeadManager can have sedanManager, SportsManager, luxuryManager etc.
 
 ```
   let director: Employee = new Employee("john", "Director", 1200);
