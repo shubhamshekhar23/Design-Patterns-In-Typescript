@@ -95,7 +95,7 @@ Dependency Injection, Lazy initialization, Multiton, Object pool, Resource acqui
 
 #### 1. ADAPTER -
 
-Description Coming Soon..
+Our car has by default petrol system installed. Now, after launching our car in the market, a significant number of users are requesting to install a Gas system as well. So, to achieve this in existing system, we create a PetrolSystemAdapter and set this to the Car.
 
 #### 2. BRIDGE -
 
