@@ -18,6 +18,8 @@ Following are the features in our problem statement :
 
 ### Behavioral Design Patterns -
 
+---
+
 #### 1. CHAIN OF RESPONSIBILITY -
 
 In our new Car Artificial Intelligence software, there is a possibility of virus from other hackers.There are different levels of virus and based on that level, employees can solve or not solve it. So, we have a team of developers and there is a hierarchy of developers. So, when there is a virus found in the system, it is given to the engineer. If he can not solve it, then he will pass it to team lead; if team lead cant then he will pass it to technical officer;etc. .
@@ -281,6 +283,8 @@ Blackboard, Null object, Servant, Specification
 
 ### Creational Design Patterns -
 
+---
+
 #### 1. ABSTRACT FACTORY -
 
 We want to expose only one simple functionality to manufacture a Car to the client and don't want client to worry abut how and where (USA, China, India) that Car is manufactured. Based on the Car Type, A Class (That is abstract factory), will internally decide how and which class too call.
@@ -363,6 +367,8 @@ Dependency Injection, Lazy initialization, Multiton, Object pool, Resource acqui
 ---
 
 ### Structural Design Patterns -
+
+---
 
 #### 1. ADAPTER -
 
