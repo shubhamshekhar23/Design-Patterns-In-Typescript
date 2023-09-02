@@ -1,29 +1,36 @@
-class HeadquarterCreation {
-  private static Headquarter: HeadquarterCreation = null;
+function main() {
+  let myHeadquarter: Headquarter = Headquarter.createHeadquarter("Tesla");
+  console.log(myHeadquarter);
+
+  let myHeadquarter2: Headquarter = Headquarter.createHeadquarter("Tesla2");
+  console.log(myHeadquarter2);
+}
+
+main();
+
+/* 
+  Makeing the constructor private so that it can not be invoked from outside and using static variable inside class to mark the reference of the single objcet.
+*/
+
+// Both myHeadquarter and myHeadquarter2 have same reference, same pointer value;
+
+class Headquarter {
+  private static headquarter: Headquarter = null;
   name: String;
+
   private constructor(name: String) {
     this.name = name;
   }
-  static createMyHeadquarter(name: String): HeadquarterCreation {
-    if (HeadquarterCreation.Headquarter == null) {
+
+  static createHeadquarter(name: String): Headquarter {
+    if (Headquarter.headquarter == null) {
       /* only can be done from inside class */
-      HeadquarterCreation.Headquarter = new HeadquarterCreation(name);
+      Headquarter.headquarter = new Headquarter(name);
     }
-    return HeadquarterCreation.Headquarter;
+    return Headquarter.headquarter;
   }
+
   getName(): String {
     return this.name;
   }
 }
-
-function main() {
-  let myHeadquarter: HeadquarterCreation =
-    HeadquarterCreation.createMyHeadquarter("Berlin");
-  console.log(myHeadquarter.name);
-  let myHeadquarter2: HeadquarterCreation =
-    HeadquarterCreation.createMyHeadquarter("Munich");
-  console.log(myHeadquarter2.name);
-}
-main();
-
-// Both myHeadquarter and myHeadquarter2 have same reference, same pointer value;
