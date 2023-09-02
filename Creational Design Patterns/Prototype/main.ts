@@ -1,3 +1,36 @@
+function main() {
+  try {
+    let S1: SuperAlienCar = new SuperAlienCar();
+    S1.getDetails();
+    console.log(S1);
+    let S2: SuperAlienCar = S1.getClone();
+    S2.setDriver("ET");
+    S2.getDetails();
+    console.log(S2);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+main();
+
+// # its better to clone an object than to create a new object when some opertaions in creating object is very costly like in this example to get the planet name for each alienCar is very costly; so we use the data fetched when creating the first object , we clone it and we can set the new proeprties to it
+
+// # we can also craete a new method craete clone that will use a different constructor and accepot arguments from the already created object properties
+// like below( not using cloneable interface) :
+
+/* 
+  public SuperAlienCar(String planetdata)
+  {
+    this.planet = planetdata;
+  }
+
+  public createClone()
+  {
+    return new SuperAlienCar(this.planet);
+  }
+*/
+
 class DatabasePlanet {
   static getPlanet(): String {
     // a method that is very costly
@@ -44,34 +77,3 @@ class SuperAlienCar extends SuperCarPlan {
     return clone;
   }
 }
-
-function main() {
-  try {
-    let S1: SuperAlienCar = new SuperAlienCar();
-    S1.getDetails();
-    console.log(S1);
-    let S2: SuperAlienCar = S1.getClone();
-    S2.setDriver("ET");
-    S2.getDetails();
-    console.log(S2);
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-main();
-
-// # its better to clone an object than to create a new object when some sopertaions in creating object is very costly like in this example to get the planet name for each alienCar is very costly; so we use the data fetched when creating the first object , we clone it and we can set the new proeprties to it
-
-// # we can also craete a new method craete clone that will use a different constructor and accepot arguments from the already created object properties
-// like below( not using cloneable interface) :
-
-/* public SuperAlienCar(String planetdata)
-{
-this.planet = planetdata;
-}
-
-public createClone()
-{
-return new SuperAlienCar(this.planet);
-}*/

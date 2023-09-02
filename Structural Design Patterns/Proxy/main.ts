@@ -1,6 +1,26 @@
+function main() {
+  try {
+    let d: Driver = new Driver(26, "shubham");
+    let c: CarProxy = new CarProxy();
+    c.setDriver(d);
+    c.driveCar();
+  } catch (e) {
+    console.log("whatsup");
+  }
+}
+main();
+
+/* proxy means in place of something; so here we using car poroxy in plavce of just car class; we want a check wheter driver is adult to drive, we put this functionality in the proxy class and then client class that proxy insted of calling direntcly the car; all the checks
+are done in proxy; */
+
+/*this pattern is the one that is used in proxy internet to ban some sites; instead of diectly connecting to the internet
+uts connected to the proxy which checks what site it is tryingt to connect if its not banned then it lets the connection go
+otherwise it prevents */
+
 interface CarPlan {
   driveCar();
 }
+
 class Car implements CarPlan {
   public driveCar() {
     console.log("The car is Driven");
@@ -38,23 +58,3 @@ class Driver {
     this.name = name;
   }
 }
-
-function main() {
-  try {
-    let d: Driver = new Driver(26, "shubham");
-    let c: CarProxy = new CarProxy();
-    c.setDriver(d);
-    c.driveCar();
-  } catch (e) {
-    console.log("whatsup");
-  }
-}
-main();
-
-/* proxy means in place of something; so here we using car poroxy in plavce of just car class; we want a check wheter driver is adult to drive
-we put this functionality in the proxy class and then client class that proxy insted of calling direntcly the car; all the checks
-are done in proxy; */
-
-/*this pattern is the one that is used in proxy internet to ban some sites; instead of diectly connecting to the internet
-uts connected to the proxy which checks what site it is tryingt to connect if its not banned then it lets the connection go
-otherwise it prevents */

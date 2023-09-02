@@ -1,3 +1,53 @@
+function main() {
+  let c1: Car = new Car("sedan");
+  let c2: Car = new Car("sports");
+  let c3: Car = new Car("luxury");
+  let c4: Car = new Car("super");
+  let c5: Car = new Car("alien");
+  let c6: Car = new Car("intelligent");
+
+  let cl: CarList = new CarList(13);
+  cl.add(c1);
+  cl.add(c2);
+  cl.add(c3);
+  cl.add(c4);
+  cl.add(c5);
+  cl.add(c6);
+
+  let p1: Customer = new Customer("skhbd", c1);
+  let p2: Customer = new Customer("skjd", c2);
+  let p3: Customer = new Customer("weqt", c3);
+  let p4: Customer = new Customer("vbnvbn", c4);
+  let p5: Customer = new Customer("ukk", c5);
+  let p6: Customer = new Customer("eryreye", c6);
+
+  let pl: CustomerList = new CustomerList(12);
+  pl.add(p1);
+  pl.add(p2);
+  pl.add(p3);
+  pl.add(p4);
+  pl.add(p5);
+  pl.add(p6);
+
+  // Above code is only data population
+
+  let custit: IteratorPlan<Customer> = pl.getIterator();
+  while (custit.hasNext()) {
+    let c: Customer = custit.next();
+    c.getDetails();
+  }
+
+  let carit: IteratorPlan<Car> = cl.getIterator();
+  while (carit.hasNext()) {
+    let c: Car = carit.next();
+    c.getDetails();
+  }
+}
+
+main();
+
+/* Iterator pattern is used when we have a list of a particular object like an array of same type of objects and we want to give a functionality of iterating through the objects in a similar way; so we implement a iteratorplan and collectionplan that provides an iterator that has similar functionality for every list of objects and have list class implement collectionplan which provides ietartor via one method (that implements iterator plan) */
+
 interface IteratorPlan<T> {
   hasNext(): Boolean;
   next(): T;
@@ -140,53 +190,3 @@ class CustomerList implements CollectionPlan<Customer> {
     return new CustomerIterator(this.customerlist);
   }
 }
-
-function main() {
-  let c1: Car = new Car("sedan");
-  let c2: Car = new Car("sports");
-  let c3: Car = new Car("luxury");
-  let c4: Car = new Car("super");
-  let c5: Car = new Car("alien");
-  let c6: Car = new Car("intelligent");
-
-  let cl: CarList = new CarList(13);
-  cl.add(c1);
-  cl.add(c2);
-  cl.add(c3);
-  cl.add(c4);
-  cl.add(c5);
-  cl.add(c6);
-
-  let p1: Customer = new Customer("skhbd", c1);
-  let p2: Customer = new Customer("skjd", c2);
-  let p3: Customer = new Customer("weqt", c3);
-  let p4: Customer = new Customer("vbnvbn", c4);
-  let p5: Customer = new Customer("ukk", c5);
-  let p6: Customer = new Customer("eryreye", c6);
-
-  let pl: CustomerList = new CustomerList(12);
-  pl.add(p1);
-  pl.add(p2);
-  pl.add(p3);
-  pl.add(p4);
-  pl.add(p5);
-  pl.add(p6);
-
-  // Above code is only data population
-
-  let custit: IteratorPlan<Customer> = pl.getIterator();
-  while (custit.hasNext()) {
-    let c: Customer = custit.next();
-    c.getDetails();
-  }
-
-  let carit: IteratorPlan<Car> = cl.getIterator();
-  while (carit.hasNext()) {
-    let c: Car = carit.next();
-    c.getDetails();
-  }
-}
-
-main();
-
-/* Iterator pattern is used when we have a list of a particular object like an array of same type of objects and we want to give a functionality of iterating through the objects in a similar way; so we implement a iteratorplan and collectionplan that provides an iterator that has similar functionality for every list of objects and have list class implement collectionplan which provides ietartor via one method (that implements iterator plan) */

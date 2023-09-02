@@ -1,3 +1,19 @@
+function main() {
+  try {
+    let ap: AutoPilot = new AutoPilot();
+    ap.start();
+  } catch (e) {
+    console.log("whatsup");
+  }
+}
+main();
+
+/**
+ * Facade means hiding all the compexities from the client. In this example all the compelexity like switching on different system
+ * for the auto pilot to work has been done by the auto pilot class whcih is a facade; if it hadnot been there to make it work
+ * client had to start all the system components himself.
+ */
+
 interface CarSystemPlan {
   turnOn();
   turnOff();
@@ -67,19 +83,3 @@ class GuidingVoice implements CarSystemPlan {
     console.log("Guiding voice is turned off");
   }
 }
-
-function main() {
-  try {
-    let ap: AutoPilot = new AutoPilot();
-    ap.start();
-  } catch (e) {
-    console.log("whatsup");
-  }
-}
-main();
-
-/**
- * Facade means hiding all the compexities from the client. In this example all the compelexity like switching on different system
- * for the auto pilot to work has been done by the auto pilot class whcih is a facade; if it hadnot been there to make it work
- * client had to start all the system components himself.
- */

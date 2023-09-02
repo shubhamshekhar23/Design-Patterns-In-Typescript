@@ -1,3 +1,29 @@
+function main() {
+  try {
+    let c1: SystemPlan = new NitroBoost(
+      new SecuritySystem(new AutoPilot(new CarSystem()))
+    );
+    console.log("Total cost of the system is " + c1.getSystemCost());
+    c1.getSystemDetails();
+    let b1: SystemPlan = new NitroBoost(
+      new SecuritySystem(new AutoPilot(new BikeSystem()))
+    );
+    console.log("Total cost of the system is " + b1.getSystemCost());
+    b1.getSystemDetails();
+  } catch (e) {
+    console.log("whatsup");
+  }
+}
+main();
+
+/* - This pattern is used when you have a lot of inherited objects of different types; in this example if we had not used decorator, 
+then we will have to create 3 separate carsystem e.g nitro system, security seystem etc. if we had bus system and bike system, 
+also then there would be 9 subclasses
+
+- Here Car system and bike system are the main classes that can be decorated with autopilot, nitroboost etc. , and also the cost
+  can be calculated.
+*/
+
 interface SystemPlan {
   getSystemDetails();
   getSystemCost(): number;
@@ -87,25 +113,3 @@ class SecuritySystem extends SystemDecorator {
     console.log("Security System");
   }
 }
-
-function main() {
-  try {
-    let c1: SystemPlan = new NitroBoost(
-      new SecuritySystem(new AutoPilot(new CarSystem()))
-    );
-    console.log("Total cost of the system is " + c1.getSystemCost());
-    c1.getSystemDetails();
-    let b1: SystemPlan = new NitroBoost(
-      new SecuritySystem(new AutoPilot(new BikeSystem()))
-    );
-    console.log("Total cost of the system is " + b1.getSystemCost());
-    b1.getSystemDetails();
-  } catch (e) {
-    console.log("whatsup");
-  }
-}
-main();
-
-/*This pattern is used when you have a lot of inherited objects of different types; in this example if we had not used decorator, then we will 
- have to create 3 separate carsystem e.g nitro system, security seystem etc. if we had bus system and bike system also then there would be 
- 9 subclasses*/

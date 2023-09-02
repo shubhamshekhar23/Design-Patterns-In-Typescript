@@ -1,3 +1,30 @@
+function main() {
+  try {
+    // setting up the voice command sysytem
+    let v1: VoiceInputPlan = new VoiceInput("drive");
+    let v2: VoiceInputPlan = new VoiceInput("startCar");
+    let driveCommand: OrVoice = new OrVoice(v1, v2);
+
+    driveCommand.interpret("driveCar");
+    driveCommand.interpret("startCar");
+
+    let v3: VoiceInputPlan = new VoiceInput("fuelcheck");
+    let v4: VoiceInputPlan = new VoiceInput("doorclosed");
+    let securityCommand: AndVoice = new AndVoice(v3, v4);
+
+    securityCommand.interpret("fuelcheck, doorclosed");
+    securityCommand.interpret("fuel, door");
+  } catch (e) {
+    console.log(e + " :set the debugger chain correclty");
+  }
+}
+
+main();
+
+/*This is interpreter; just like we can define grammar rules; here we define an interpreter called voice input
+that has a data based on which the interpretaion will go on; and then there are expressions handler like what combination we
+want to handle AND OR and we can create our combinatuion of voice inputs and then interpret */
+
 interface VoiceInputPlan {
   interpret(input: string): Boolean;
 }
@@ -54,30 +81,3 @@ class VoiceInput implements VoiceInputPlan {
     return false;
   }
 }
-
-function main() {
-  try {
-    // setting up the voice command sysytem
-    let v1: VoiceInputPlan = new VoiceInput("drive");
-    let v2: VoiceInputPlan = new VoiceInput("startCar");
-    let driveCommand: OrVoice = new OrVoice(v1, v2);
-
-    driveCommand.interpret("driveCar");
-    driveCommand.interpret("startCar");
-
-    let v3: VoiceInputPlan = new VoiceInput("fuelcheck");
-    let v4: VoiceInputPlan = new VoiceInput("doorclosed");
-    let securityCommand: AndVoice = new AndVoice(v3, v4);
-
-    securityCommand.interpret("fuelcheck, doorclosed");
-    securityCommand.interpret("fuel, door");
-  } catch (e) {
-    console.log(e + " :set the debugger chain correclty");
-  }
-}
-
-main();
-
-/*This is interpreter; just like we can define grammar rules; here we define an interpreter called voice input
-that has a data based on which the interpretaion will go on; and then there are expressions handler like what combination we
-want to handle AND OR and we can create our combinatuion of voice inputs and then interpret */

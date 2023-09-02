@@ -1,3 +1,24 @@
+function main() {
+  try {
+    let car1: Mercedesfactory = Mercedesfactory.create(CarType.SEDAN);
+    car1.showme();
+    let car2: Mercedesfactory = Mercedesfactory.create(CarType.LUXURYCAR);
+    car2.showme();
+    let car3: Mercedesfactory = Mercedesfactory.create(CarType.SPORTSCAR);
+    car3.showme();
+    let car4: Mercedesfactory = Mercedesfactory.create(CarType.SEDAN);
+    car4.showme();
+  } catch (e) {}
+}
+
+main();
+
+/**
+ * use static method to craete products in a factory, that will handle the switch case statementa ccording to the argument passed
+ * all produts will extend from the factory class
+ * client code should not be affected when we add a new cartype in our sysytem
+ */
+
 enum CarType {
   SEDAN,
   SPORTSCAR,
@@ -62,22 +83,3 @@ class Luxurycar extends Mercedesfactory {
     console.log("I am luxury car with id " + this.carId);
   }
 }
-
-function main() {
-  try {
-    let car1: Mercedesfactory = Mercedesfactory.create(CarType.SEDAN);
-    car1.showme();
-    let car2: Mercedesfactory = Mercedesfactory.create(CarType.LUXURYCAR);
-    car2.showme();
-    let car3: Mercedesfactory = Mercedesfactory.create(CarType.SPORTSCAR);
-    car3.showme();
-    let car4: Mercedesfactory = Mercedesfactory.create(CarType.SEDAN);
-    car4.showme();
-  } catch (e) {}
-}
-
-main();
-
-// use static method to craete products in a factory, that will handle the switch case statementa ccording to the argument passed
-// all produts will extend from the factory class
-// client code should not be affected when we add a new cartype in our sysytem

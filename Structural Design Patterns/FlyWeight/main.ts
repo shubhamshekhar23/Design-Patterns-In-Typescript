@@ -1,3 +1,26 @@
+function main() {
+  try {
+    let cs1: CarStatusPlan = CarProvider.getCarStatus("sports");
+    cs1.setKmCovered(21);
+    cs1.setMileage(30);
+    cs1.getStatus();
+  } catch (e) {
+    console.log("whatsup");
+  }
+}
+main();
+
+/* - After a car is purchased by a customer, he can get the details, when should he go for servicing; he can go online to the website of the car
+ and get the car object(carstatusobject) by specifying which type of car he has.; then he can set the km covered by the car and how much mileage 
+ he is getting; then based on the internal formula of the system; the advide is returned;
+
+- Now , ther are so many request for the same type of car like thousands; and we have to create carstausobject for all of them;
+ this is not a good idea; thats why we cache the object created and then return that same object to the next customer if the type matches
+ so in this way we only have 3 cars in the cache and there is no memory overload. 
+ 
+- We not considering concurrent request in the case. assumption, at one time only one car status object be used.
+ */
+
 interface CarStatusPlan {
   getStatus();
   setKmCovered(p: number);
@@ -9,13 +32,13 @@ interface PlanMap<T, U> {
 }
 
 class CarProvider {
-  private static hm: PlanMap<string, CarStatusPlan> = {};
+  private static hm: PlanMap<String, CarStatusPlan> = {};
 
-  public static getCarStatus(type: string): CarStatusPlan {
+  public static getCarStatus(type: String): CarStatusPlan {
     let c: CarStatusPlan = null;
 
-    if (CarProvider.hm[type]) {
-      c = CarProvider.hm[type];
+    if (CarProvider.hm["type"]) {
+      c = CarProvider.hm["type"];
     } else {
       switch (type) {
         case "sports":
@@ -30,7 +53,7 @@ class CarProvider {
         default:
           console.log("Unreachable code!");
       }
-      CarProvider.hm[type] = c;
+      CarProvider.hm["type"] = c;
     }
     return c;
   }
@@ -100,23 +123,3 @@ class SportsCarStatus implements CarStatusPlan {
     }
   }
 }
-
-function main() {
-  try {
-    let cs1: CarStatusPlan = CarProvider.getCarStatus("sports");
-    cs1.setKmCovered(21);
-    cs1.setMileage(30);
-    cs1.getStatus();
-  } catch (e) {
-    console.log("whatsup");
-  }
-}
-main();
-
-/* After a car is purchased by a customer, he can get the details wghen shoudl he go for servicing; he can go online to teh website of the car
- and get the car object(carstatusobject) by specifying which type of car he has.; then he can set the kmcovered by the car and how much mileage 
- he is getting; then based on the internal formula of the system; tghe advide is returned;*/
-
-/*Now , ther are so many request for the same type of car like thousands; and we have to create carstausobject for all of them;
- this is not a good idea; thats why we cache the object created and then return that same object to the next customer if the type matches
- so in this way we only have 3 cars in the cache and there is nnno memory overload. */
