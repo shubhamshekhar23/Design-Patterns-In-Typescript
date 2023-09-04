@@ -2,7 +2,7 @@
 
 ## One Mega Problem Statement - "Setting Up of a Car Company"
 
-All 23 Gang of four Design Patterns implemented in Java
+All 23 Gang of four Design Patterns implemented in Typescript
 
 ### _Whats So SPECIAL_ :
 
