@@ -1,6 +1,6 @@
 Adapter - 
 
-Description -
+### Description -
 
 1.  adapters are used when we have a class (Client) expecting some type of object and we have an object (Adaptee) offering the same features but exposing a different interface.
 

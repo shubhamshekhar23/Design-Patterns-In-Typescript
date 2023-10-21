@@ -1,6 +1,6 @@
 State - 
 
-Description -
+### Description -
 1. This design pattern is needed when we want to change our behaviour of system based on the internal state. We can set the state of the system by providing our state object and that will govern the behaviour.
 
 2. In our example, gears our different states and accelerate is our behavuiour of the system. We can change the state by changing gear of the car and then we can accelerate the car. Gear will govern the accelerate behaviour.
@@ -24,4 +24,4 @@ car1.changeGear(gear1);
 car1.accelerate(45); // gear1 will decide if it can accelerate upto this speed or not
 
 
-Problem Statement -
+### Problem Statement -

@@ -1,6 +1,6 @@
 Memento - 
 
-Description -
+### Description -
 1. This design pattern is needed when we want to save the state of a continuously changing system. We save the state in a list and then use this list to restore the system to a previous state.
 
 2. This has 3 parts - 
@@ -18,4 +18,4 @@ careTaker.add(originator.createMemento());
 originator.setStatusFromMemento(careTaker.getMemento(index))
 
 
-Problem Statement -
+### Problem Statement -

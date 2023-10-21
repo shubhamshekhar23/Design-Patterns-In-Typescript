@@ -1,6 +1,6 @@
 # Design-Patterns-in-Typescript
 
-## One Mega Problem Statement - "Setting Up of a Car Company"
+## One Mega ### Problem Statement - "Setting Up of a Car Company"
 
 All 23 Gang of four Design Patterns implemented in Typescript
 
