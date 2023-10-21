@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let director: Employee = new Employee("john", "Director", 1200);
     let leadmanager: Employee = new Employee("Kate", "Manager", 1000);

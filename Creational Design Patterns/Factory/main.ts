@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let car1: Mercedesfactory = Mercedesfactory.create(CarType.SEDAN);
     car1.showme();

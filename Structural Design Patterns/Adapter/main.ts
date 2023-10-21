@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let c1: Car = new Car();
     c1.startCar();

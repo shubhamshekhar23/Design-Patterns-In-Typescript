@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let ch: CarHeadquarter = new CarHeadquarter("sedan");
   let cp1: ShowRoomPlan = new ShowRoom("Delhi");
   let cp2: ShowRoomPlan = new ShowRoom("Bangalore");

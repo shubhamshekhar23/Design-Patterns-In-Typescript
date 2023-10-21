@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let c1: Car = new Car("sedan");
   let c2: Car = new Car("sports");
   let c3: Car = new Car("luxury");
@@ -60,7 +60,7 @@ interface CollectionPlan<T> {
 class Car {
   public type: String;
   static id: number = 1;
-  public carId: Number;
+  public carId: number;
 
   constructor(type: String) {
     this.type = type;

@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let car1: Car = Myabstractfactory.createCar(CarType.SEDAN_USA);
     car1.getDetails();

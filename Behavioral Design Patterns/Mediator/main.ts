@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let c1: CarPlantPlan = new CarPlant1("sportscar", 10);
   let c2: CarPlantPlan = new CarPlant2("sedancar", 9);
   let c3: CarPlantPlan = new CarPlant3("luxurycar", 6);

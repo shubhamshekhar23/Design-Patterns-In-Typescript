@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let c: CarPlan = new LuxuryCar("shubham");
   let cv: CarPriceVisitor = new CarPriceVisitor();
   c.getPrice(cv);
@@ -78,7 +78,7 @@ class LuxuryCar implements CarPlan {
   }
 
   public getPrice(cp: CarPriceVisitor) {
-    let p: Number = cp.visitLuxury(this);
+    let p: number = cp.visitLuxury(this);
     console.log(
       "Mr. " + this.owner + " please pay " + p + " dollars for the LuxuryCar"
     );

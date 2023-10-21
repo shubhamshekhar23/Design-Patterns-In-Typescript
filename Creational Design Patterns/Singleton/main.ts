@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let myHeadquarter: Headquarter = Headquarter.createHeadquarter("Tesla");
   console.log(myHeadquarter);
 

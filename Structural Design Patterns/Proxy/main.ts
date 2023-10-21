@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let d: Driver = new Driver(26, "shubham");
     let c: CarProxy = new CarProxy();

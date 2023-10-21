@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     /* Creating a new virus instance and set the severity level just to test */
     let virus: CarAiVirus = new CarAiVirus(1);
@@ -26,12 +26,12 @@ main();
 /* There are new viruses being discovered in the system whose severity level can be set ; now there is a debugger chain hierecahy; if an engineer can solve it then it's fine; otherwise he will pass it to team lead; if team lead can't solve it then he will pass it to technical officer;if he can't then he will pass it to the Expert where its solved finally. So a chain abstract class is created and all the debuggers will extend from it amd create a chain */
 
 class CarAiVirus {
-  private threatLevel: Number;
-  constructor(p: Number) {
+  private threatLevel: number;
+  constructor(p: number) {
     this.threatLevel = p;
   }
 
-  public getThreat(): Number {
+  public getThreat(): number {
     return this.threatLevel;
   }
 }

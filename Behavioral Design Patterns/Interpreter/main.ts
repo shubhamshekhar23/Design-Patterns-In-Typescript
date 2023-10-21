@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     // setting up the voice command sysytem
     let v1: VoiceInputPlan = new VoiceInput("drive");
