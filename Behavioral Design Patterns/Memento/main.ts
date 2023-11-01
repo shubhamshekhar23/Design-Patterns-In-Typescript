@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let css1: CarSoftwareStatus = new CarSoftwareStatus("change1", "correction1");
 
   let sct: SoftwareCareTaker = new SoftwareCareTaker();

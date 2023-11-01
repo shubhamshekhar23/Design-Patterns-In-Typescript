@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let g0: GearState = new NeutralGear();
   let g1: GearState = new FirstGear();
   let g2: GearState = new SecondGear();

@@ -1,6 +1,6 @@
-Interpreter - 
+## Interpreter - 
 
-Description -
+### Description -
 1. We want to create differnt interpreters that have some rules to interpret some data( can be strings, objects, arrays etc.).
 
 2. So, we craete differet interpretrs classes that will take an input of data.
@@ -12,4 +12,4 @@ Description -
 5. Now , we craete complex expressions handler (AndVoice and OrVoice) based on our requirements that will take an input data and act on it using the instances of voice input instances.
 
 
-Problem Statement -
+### Problem Statement -

@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let sportsbuilder1: CarBuilderPlan = new SportsBuilder();
     let E1: Engineer = new Engineer(sportsbuilder1);

@@ -1,6 +1,6 @@
 Mediator - 
 
-Description -
+### Description -
 1. This design pattern is needed when we don't want to expose one functionality to end user. that's why we craete one mediator that interacts with the end user and finally communicates with the main system
 
 2. In our example, we have 3 car types - luxury, sedan, sports. All 3 car tyypes have their separate car plants. Each car plant can book the car if they have the cars in the stock.
@@ -16,4 +16,4 @@ john = new Customer("John", mdtr); // customer is associated with one particular
 john.requestBooking("sportscar");
 
 
-Problem Statement -
+### Problem Statement -

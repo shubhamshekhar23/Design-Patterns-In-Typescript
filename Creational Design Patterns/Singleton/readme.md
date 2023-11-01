@@ -1,6 +1,6 @@
 Singleton - 
 
-Description -
+### Description -
 1.  we need to have only one instance of our class for example a single DB connection shared by multiple objects as creating a separate DB connection for every object may be costly. Similarly, there can be a single configuration manager or error manager in an application that handles all problems instead of creating multiple managers.
 
 2. This pattern involves a single class which is responsible to create an object while making sure that only single object gets created.

@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let S1: SuperAlienCar = new SuperAlienCar();
     S1.getDetails();

@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let c1: SystemPlan = new NitroBoost(
       new SecuritySystem(new AutoPilot(new CarSystem()))

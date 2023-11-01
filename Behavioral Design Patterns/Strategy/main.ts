@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let t: Transformer = new Transformer();
   t.setJump(new SuperJump());
   t.setKick(new SuperKick());

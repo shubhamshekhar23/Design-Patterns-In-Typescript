@@ -1,6 +1,6 @@
-Command - 
+## Command - 
 
-Description -
+### Description -
 1. we have a device (d1), and we can setcommands to this device by passing differend command instances. When we execute this device based on which command was set latest, it will execute that command.
 
 2. So, it means that every command should have an information how that execute will actually do. It means that each command instance will have an instance of the system on which the methods will be called ( can be multiple methods).
@@ -11,7 +11,7 @@ Description -
 
 
 
-Problem Statement -
-# Here in this example we only have one button in the remote that can be used to perform differnt tasks like lighton,lightoff, play miusic, turn on AC, turnOff ac. This commands use different systems Light, MusicSystem, Aircondition.
+### Problem Statement -
+- Here in this example we only have one button in the remote that can be used to perform differnt tasks like lighton,lightoff, play miusic, turn on AC, turnOff ac. This commands use different systems Light, MusicSystem, Aircondition.
 All these commands can be performed on a single button press; we just have to setCommand and everytime we want it to do adifferent task, we will pass the instance of the new task. we can do it by creating a class out of thses commands
 which uses the original system methods( like Lightcontrol, muysicsystem, aircondition) and then perform on execute method 

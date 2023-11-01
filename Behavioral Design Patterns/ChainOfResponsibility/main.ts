@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     /* Creating a new virus instance and set the severity level just to test */
     let virus: CarAiVirus = new CarAiVirus(1);

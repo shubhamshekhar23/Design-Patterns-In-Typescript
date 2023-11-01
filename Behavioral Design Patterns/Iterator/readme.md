@@ -1,6 +1,6 @@
 Iterator - 
 
-Description -
+### Description -
 1. We want to create differnt types of lists that will store some type of objects and those list have some functionality to iterate over the list and access details of those objects.
 
 2. This is saame type of a "for loop" functionality but in a more elegant fashion.
@@ -22,4 +22,4 @@ while(it.hasNext()){
 }
 
 
-Problem Statement -
+### Problem Statement -

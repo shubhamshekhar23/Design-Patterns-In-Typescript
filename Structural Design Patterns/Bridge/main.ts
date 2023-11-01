@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let sc1: CarPlan = new SportsCar(new RedFinish());
     sc1.paintCar();

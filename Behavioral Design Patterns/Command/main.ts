@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     /* Setting up of system */
     let r: Remote = new Remote();

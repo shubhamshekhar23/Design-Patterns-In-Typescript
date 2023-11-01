@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let cs1: CarStatusPlan = CarProvider.getCarStatus("sports");
     cs1.setKmCovered(21);

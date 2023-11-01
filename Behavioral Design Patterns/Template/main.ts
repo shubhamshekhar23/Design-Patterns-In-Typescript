@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let l1: SportsCar = new SportsCar("red");
   l1.constructCar();
 }

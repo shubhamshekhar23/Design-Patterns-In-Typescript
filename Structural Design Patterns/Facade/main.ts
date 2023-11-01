@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   try {
     let ap: AutoPilot = new AutoPilot();
     ap.start();

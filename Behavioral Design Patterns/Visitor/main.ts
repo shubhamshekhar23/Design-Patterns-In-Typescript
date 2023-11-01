@@ -1,4 +1,4 @@
-function main() {
+export function main() {
   let c: CarPlan = new LuxuryCar("shubham");
   let cv: CarPriceVisitor = new CarPriceVisitor();
   c.getPrice(cv);
