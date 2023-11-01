@@ -60,7 +60,7 @@ interface CollectionPlan<T> {
 class Car {
   public type: String;
   static id: number = 1;
-  public carId: Number;
+  public carId: number;
 
   constructor(type: String) {
     this.type = type;
